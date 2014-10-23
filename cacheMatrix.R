@@ -28,6 +28,8 @@ cacheSolve <- function(x, ...) {
     message("getting cached data")
     return(m)
   }
+
+## This section defines the output matrix using the solve function for the inverse if the original matrix hasn't been solved and cached. 
   output<- x$get()
   m <- solve(output, ...)
   x$makematrix(m)
